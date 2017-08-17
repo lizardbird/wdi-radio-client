@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head ng-app="WDIRadioApp">
+    <meta charset="utf-8">
+    <title>WDI Radio</title>
+    <!-- CDNs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
+    <!-- Modules -->
+      <script src="js/app.module.js"></script>
+    <!-- Services -->
+      <script src="js/services/song.js"></script>
+    <!-- Directives -->
+    <!-- Routes -->
+      <script src="js/songs/song.routes.js"></script>
+    <!-- Controllers -->
+      <script src="js/songs/index.controller.js"></script>
+  </head>
+  <body>
+    <h1>WDI Radio</h1>
+    <main ui-view>
+      <h2><a ui-sref="songIndex">View Songs</a></h2>
+    </main>
+
+  </body>
+</html>
