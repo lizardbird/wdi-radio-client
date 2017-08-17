@@ -1,0 +1,15 @@
+<div class="maincontent">
+  <h2>New Song</h2>
+
+<form>
+  <input placeholder="Title" data-ng-model="vm.song.title" />
+  <input placeholder="Artist" data-ng-model="vm.song.artist" />
+  <input placeholder="Photo URL" data-ng-model="vm.song.img_url" />
+  <input placeholder="Audio URL" data-ng-model="vm.song.audio_url" />
+  <button type="button" data-ng-click="vm.create()">Create</button>
+</form>
+
+<pre>
+  {{vm.song | json}}
+</pre>
+</div>

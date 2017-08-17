@@ -1,0 +1,10 @@
+<div class="maincontent">
+  <div class="songshowbox">
+
+  <img class="album" ng-src="{{vm.song.img_url}}" alt=""><br>
+    <h2>{{vm.song.title}}</h2>
+    <p>by: {{ vm.song.artist }}</p>
+    <a target="_blank" href="{{vm.song.audio_url}}">Listen on Spotify</a><br><br>
+    <a ui-sref="songEdit({id: vm.song.id})">Edit This Song</a>
+  </div>
+</div>

@@ -1,8 +1,10 @@
-<h1>Songs</h1>
-<div data-ng-repeat="song in vm.songs">
+<div class="maincontent">
 
-  <p>
-  {{ song.title }}
-  </p>
+  <h1>Songs</h1>
+  <div class="songbox" data-ng-repeat="song in vm.songs">
+        <img class="thumbnail" ng-src="{{song.img_url}}" alt="">
+        <a ui-sref="songShow({id: song.id})">{{ song.title }}</a>
+  </div>
+  <br>
 
 </div>

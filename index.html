@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head ng-app="WDIRadioApp">
+  <head>
     <meta charset="utf-8">
     <title>WDI Radio</title>
+    <!-- Styling -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- CDNs -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
     <!-- Modules -->
       <script src="js/app.module.js"></script>
     <!-- Services -->
-      <script src="js/services/song.js"></script>
+      <script src="js/songs/song.service.js"></script>
     <!-- Directives -->
     <!-- Routes -->
       <script src="js/songs/song.routes.js"></script>
     <!-- Controllers -->
       <script src="js/songs/index.controller.js"></script>
+      <script src="js/songs/show.controller.js"></script>
+      <script src="js/songs/new.controller.js"></script>
+      <script src="js/songs/edit.controller.js"></script>
   </head>
-  <body>
-    <h1>WDI Radio</h1>
-    <main ui-view>
-      <h2><a ui-sref="songIndex">View Songs</a></h2>
-    </main>
+  <body ng-app="WDIRadioApp">
+      <div class="sidebar">
+      </div>
+      <div class="container">
+      <nav>
+        <div class="logobox">
+          <img class="logo" ng-src="images/logo.png" alt="">
+        </div>
+        <ul>
+          <li><a href="index.html">WDI Radio</a></li>
+          <li><a ui-sref="songIndex">View Songs</a></li>
+          <li><a ui-sref="songNew">Add New Song</a></li>
+        </ul>
+      </nav>
+      <main ui-view>
+        <img class="beat" ng-src="images/beat.png" alt="">
+      </main>
 
+    </div>
   </body>
 </html>

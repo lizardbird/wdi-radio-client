@@ -1,5 +1,6 @@
-app.controller('SongIndexController', [
-  'songs',
+angular.module('WDIRadioApp')
+.controller('SongIndexController', [
+  'Song',
   SongIndexController
 ])
 
